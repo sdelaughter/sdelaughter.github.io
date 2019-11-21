@@ -36,6 +36,7 @@ plugins:
 header_pages:
   - about.md
   - resume.md
+  - pottery.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,3 +57,12 @@ header_pages:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+minima:
+  social_links:
+    github: sdelaughter
+    linkedin: sdelaughter
+    twitter: samdelaughter
+    keybase: samdelaughter
+    instagram: s.delaughter
+    bandcamp: sdlwdr
