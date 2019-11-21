@@ -1,0 +1,44 @@
+================================================================== https://keybase.io/samdelaughter 
+-------------------------------------------------------------------- I hereby claim:
+  * I am an admin of https://sdelaughter.github.io
+  * I am samdelaughter (https://keybase.io/samdelaughter) on keybase.
+  * I have a public key ASDtnn4TQ3zPl3c9y3VazqsyXHJluWrurOezaeYa631tego To do so, I am signing this 
+object: {
+  "body": {
+    "key": {
+      "eldest_kid": "0120ed9e7e13437ccf97773dcb755aceab325c7265b96aeeace7b369e61aeb7d6d7a0a",
+      "host": "keybase.io",
+      "kid": "0120ed9e7e13437ccf97773dcb755aceab325c7265b96aeeace7b369e61aeb7d6d7a0a",
+      "uid": "861d4e2189e7f57ef5bb91cdb19e9219",
+      "username": "samdelaughter"
+    },
+    "merkle_root": {
+      "ctime": 1574299621,
+      "hash": 
+"475a829def07e108b3faec55ce17db015a42f7ef8e8b20bd5b8d53dede7f74b7892a4cb4eef3a523def27c595fd10044701a9935d76fc5b9b716e937ae203c13",
+      "hash_meta": "8ddfa9f946168c8764fb9e8e780beb64e55461a91c39c589a2f4d6f59e452dbe",
+      "seqno": 10379918
+    },
+    "service": {
+      "entropy": "mKP7yTZg1Yj9Kh+Ox2GBWJ8p",
+      "hostname": "sdelaughter.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.0.0"
+  },
+  "ctime": 1574299624,
+  "expire_in": 504576000,
+  "prev": "22a3f77fc5e2eb90380f1e96620b1d4ce7d68652fd4b1bdb9d01c1dbdb58348d",
+  "seqno": 19,
+  "tag": "signature"
+}
+which yields the signature: 
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7Z5+E0N8z5d3Pct1Ws6rMlxyZblq7qzns2nmGut9bXoKp3BheWxvYWTESpcCE8QgIqP3f8Xi65A4Dx6WYgsdTOfWhlL9SxvbnQHB29tYNI3EIJ89UlMxjg8bz3k124QejUYxY7D4ydip3lE4Kn2+eKFQAgHCo3NpZ8RArhL1nsVujjV2kbyLJ8FBXXcMoon7S81VRh0JYmXYT+ihLK0Mjp/8qvlP/apNn+D7thgWxcXh1u2VFzg81Nx+DahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAxk15O9tP8Yo6/0xGffjy4oYZXnPtGvcDETxR59Jy7Oo3RhZ80CAqd2ZXJzaW9uAQ== 
+And finally, I am proving ownership of this host by posting or appending to this document. View my 
+publicly-auditable identity here: https://keybase.io/samdelaughter
+==================================================================
