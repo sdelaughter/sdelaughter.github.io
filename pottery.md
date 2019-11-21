@@ -13,7 +13,7 @@ permalink: /pottery/
     <td colspan="12"><img src="teaset1.JPG" alt="tea set"></td>
   </tr>
   <tr>
-    <td colspan="12">tea set | verdigris | 2019</td>
+    <td colspan="12">tea set | verdigris & ohata red | 2019</td>
   </tr>
 
   <tr>
