@@ -38,6 +38,7 @@ plugins:
 header_pages:
   - about.md
   - resume.md
+  - research.md
   - pottery.md
   - music.md
 
