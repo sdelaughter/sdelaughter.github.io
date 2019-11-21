@@ -6,7 +6,7 @@ permalink: /pottery/
 
 <table style="width:100%" border="5">
   <tr>
-    <td colspan="12"><img src="teaset1.JPG" alt="tea set">tea set | 2018</td>
+    <td colspan="12"><img src="teaset1.JPG" alt="tea set">tea set | 2019</td>
   </tr>
   <tr>
     <td colspan="12"><img src="bud-vase.JPG" alt="bud vase">bud vase | 2019</td>
