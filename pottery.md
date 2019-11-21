@@ -9,6 +9,10 @@ permalink: /pottery/
     <td colspan="12"><img src="teaset1.JPG" alt="tea set">tea set | 2019</td>
   </tr>
   <tr>
+    <td colspan="6"><img src="small-bowl1.JPG" alt="small bowl">small bowl | 2019</td>
+    <td colspan="6"><img src="small-bowl1_top.JPG" alt="small bowl (top)">&nbsp;</td>
+  </tr>
+  <tr>
     <td colspan="12"><img src="bud-vase.JPG" alt="bud vase">bud vase | 2019</td>
   </tr>
   <tr>
@@ -26,12 +30,8 @@ permalink: /pottery/
   </tr>
   <tr>
     <td colspan="4"><img src="planter1.JPG" alt="planter">planter | 2019</td>
-    <td colspan="4"><img src="planter1_top.JPG" alt="planter (top)">&nbsp;</td>
+    <td colspan="4"><img src="planter1_top.JPG" alt="planter (top)">whoops</td>
     <td colspan="4"><img src="planter1_foot.JPG" alt="planter (foot)">&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="6"><img src="small-bowl1.JPG" alt="small bowl">small bowl | 2019</td>
-    <td colspan="6"><img src="small-bowl1_top.JPG" alt="small bowl (top)">&nbsp;</td>
   </tr>
   <tr>
     <td colspan="6"><img src="small-bowl2.JPG" alt="small bowl">small bowl | 2019</td>
