@@ -17,7 +17,7 @@ none yet
 none yet -->
 
 # SIGTBD Papers
-Since 2016, the CSAIL Student Committee has hosted [SIGTBD](http://sigtbd.csail.mit.edu): "the premier conference in TBD."  Submissions are largely satirical yet often present the most absurd results with the deepest and most careful analysis.  I joined the conference's organizing committee in 2019.
+Since 2016, the CSAIL Student Committee has hosted an annual April Fools' Day conference known as [SIGTBD](http://sigtbd.csail.mit.edu), "the premier conference in TBD."  Submissions are largely satirical yet often present the most absurd results with the deepest and most careful analysis.  I joined the conference's organizing committee in 2019.
 
 I've had the following papers accepted to SIGTBD, though I should note that the conference typically has a 100% acceptance rate:
 

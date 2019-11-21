@@ -4,11 +4,11 @@ title: music
 permalink: /music/
 ---
 
-I started recording music sometime around 2007, but have been making it ever since I can remember.
+I started recording music sometime around 2007, but have been making it for as long as I can remember.
 
-You can listen to my newer albums and EPs below, and others on my [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr) pages.  All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+You can listen to my newer albums and EPs below, and more is available on my [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr) pages.  All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-Mostly I just try to make music I enjoy listening to -- hopefully you enjoy it as well.
+I mostly just try to make music I enjoy listening to -- hopefully you enjoy it as well.
 
 
 <table style="width:100%" border="5">
