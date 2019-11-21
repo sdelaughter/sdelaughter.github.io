@@ -19,6 +19,6 @@ none yet -->
 # SIGTBD Papers
 Since 2016, the CSAIL Student Committee has hosted [SIGTBD](http://sigtbd.csail.mit.edu): "the premier conference in TBD."  Submissions are largely satirical yet often present the most absurd results with the deepest and most careful analysis.  I joined the conference's organizing committee in 2019.
 
-I've had the following papers accepted to SIGTBD (it's a very low bar):
+I've had the following papers accepted to SIGTBD, though I should note that the conference typically has a 100% acceptance rate:
 
  - [Character Customization in Fortnite Battle Royale as a Channel for Covert Communication (2018)](fortnite_covert_channels.pdf)
