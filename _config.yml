@@ -37,6 +37,7 @@ plugins:
 # Header Links
 header_pages:
   - about.md
+  - blog.md
   - resume.md
   - research.md
   - pottery.md
