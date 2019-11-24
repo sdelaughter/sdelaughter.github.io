@@ -70,7 +70,7 @@ permalink: /pottery/
     <td colspan="6"><img src="small-bowl2_top.JPG" alt="small bowl (top)"></td>
   </tr>
   <tr>
-    <td colspan="12">small bowl | ? | 2019</td>
+    <td colspan="12">small bowl | unknown | 2019</td>
   </tr>
 
   <tr>
@@ -103,6 +103,6 @@ permalink: /pottery/
     <td colspan="6"><img src="fruit-bowl_top.JPG" alt="fruit bowl (top)"></td>
   </tr>
   <tr>
-    <td colspan="12">fruit bowl | ? | 2011</td>
+    <td colspan="12">fruit bowl | unknown | 2011</td>
   </tr>
 </table>
