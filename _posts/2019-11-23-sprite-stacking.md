@@ -144,16 +144,18 @@ The `- 1000` at the end of the second line is very important.  The amount you ne
 ![](/blog/sprite_stacking/rotation_problem.gif)
 
 # Adding Animations
-Now we're ready to animate our player.  Since we're already using sprite frames to give our objects height, we can't use them for animation as intended.  Instead, you'll need to make a new voxel model for every frame of animation and have your object cycle through them manually.  Creating these models will almost certainly be the most time consuming part of making a sprite-stacked game.  You're on your own for that part, but I'll walk you through the full process of coding a simple three-frame animation.
+Now we're ready to animate our player.  Since we're already using sprite frames to give our objects height, we can't use them for animation as intended.  Instead, you'll need to make a new voxel model for every frame of animation and make your object cycle through them manually.  Creating these models will almost certainly be the most time consuming part of making a sprite-stacked game.  You're on your own for that part, but I'll walk you through the full process of coding a simple three-frame animation.
 
-First you'll need to initialize two new variables in your player's Create event:
+First you'll need to initialize four new variables in your player's Create event:
 
 ```
 animationCounter = -1;
 frameCounter = -1;
+state = PLAYERSTATE.FREE;
+defaultState = PLAYERSTATE.FREE;
 ```
 
-Then create a Script named Animate with the following contents:
+Then create a Script named `Animate` with the following contents:
 
 ```
 if argument0.frameCounter <= 0 {
@@ -174,9 +176,9 @@ argument0.frameCounter -= 1;
 
 This script will help simplify the process of cycling through sprites.  It takes two arguments as input: an object to be animated, and an "animation" to be rendered on that object.  Each animation is structured as a 2D array with two columns and arbitrarily many rows.  The first column contains the sprite to be displayed, and the second column contains a number indicating the duration for which that sprite should be displayed.  We'll define one of these animations in a moment.
 
-First you'll need to set up a state machine for your player, the same way you probably would for a regular 2D game.  This defines the core logic of what actions your player is able to take and when.  They'll begin in the "Free" state, in which they can walk around the map.  When a certain button is pressed they'll enter the Attack state, which forces them to stop moving, plays an attack animation, and then returns them to the Free state.
+First you'll need to set up a state machine for your player, the same way you probably would for a regular 2D game.  This defines the core logic of what actions your player is able to take and when.  They'll begin in the `PLAYERSTATE.FREE` state, in which they can walk around the map.  When a certain button is pressed they'll enter the `PLAYERSTATE.ATTACK` state, which forces them to stop moving, plays an attack animation, and then returns them to the `PLAYERSTATE.FREE` state.
 
-Add variables named `state` and `defaultState` to your player's Create event, both with  initial values of `PLAYERSTATE.FREE`.  Next, listen for input from the attack button in the player's Step event:
+Listen for input from the attack button in the player's Step event:
 
 ```
 keyAttack = gamepad_button_check_pressed(0, gp_shoulderr);
@@ -191,7 +193,7 @@ switch(state) {
 }
 ```
 
-Now we can define these two state functions with two new Scripts.  Since we want the player to be able to move around while in the free state, let's relocate our earlier movement code to PlayerState_Free, and add to it an if statement to check for attack input and change the player's state accordingly.  Combined, PlayerState_Free should look like:
+Now we can define these two state functions with two new Scripts.  Since we want the player to be able to move around while in the free state, let's relocate our earlier movement code from the main Step function to a script named `PlayerState_Free`, and add to it an if statement to check for attack input and change the player's state accordingly.  Combined, this script should look something like:
 
 ```
 var aimDestination = point_direction(0, 0, axislh, axislv);
@@ -207,9 +209,11 @@ if keyAttack {
 }
 ```
 
-In PlayerState_Attack we stop the player's movement, define the attack animation array, and pass it to the Animate script:
+The `PlayerState_Attack` script will stop the player's movement, define the attack animation array, and pass that array to the `Animate` script:
 
 ```
+speed = 0;
+
 animation[0, 0] = sPlayerAttack0;
 animation[0, 1] = 0.1;
 animation[1, 0] = sPlayerAttack1;
@@ -217,11 +221,10 @@ animation[1, 1] = 0.1;
 animation[2, 0] = sPlayerAttack0;
 animation[2, 1] = 0.1;
 
-speed = 0;
 Animate(oPlayer, animation);
 ```
 
-This assumes you have created two stacked sprites named sPlayerAttack0 and sPlayerAttack1.  When the Animate script is called, it will change the sprite of the Player object to sPlayerAttack0 for 0.1 seconds, to sPlayerAttack1 for 0.1 seconds, and back to sPlayerAttack0 for another 0.1 seconds.  Once that's finished, Animate automatically resets the player to its Free state, and we're done!
+This assumes you have created two new sprites named sPlayerAttack0 and sPlayerAttack1.  When the `Animate` script is called, it will change the sprite of the Player object to sPlayerAttack0 for 0.1 seconds, to sPlayerAttack1 for 0.1 seconds, and back to sPlayerAttack0 for another 0.1 seconds.  Once that's finished, `Animate` automatically resets the player to its default (free) state, and we're done!
 
 <img src="/blog/sprite_stacking/animation.gif" width="50%"/>
 
