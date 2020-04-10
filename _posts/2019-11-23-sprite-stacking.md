@@ -224,7 +224,7 @@ animation[2, 1] = 0.1;
 Animate(oPlayer, animation);
 ```
 
-This assumes you have created two new sprites named sPlayerAttack0 and sPlayerAttack1.  When the `Animate` script is called, it will change the sprite of the Player object to sPlayerAttack0 for 0.1 seconds, to sPlayerAttack1 for 0.1 seconds, and back to sPlayerAttack0 for another 0.1 seconds.  Once that's finished, `Animate` automatically resets the player to its default (free) state, and we're done!
+This assumes you have created two new sprites named `sPlayerAttack0` and `sPlayerAttack1`.  When the `Animate` script is called, it will change the sprite of the player object to `sPlayerAttack0` for 0.1 seconds, to `sPlayerAttack1` for 0.1 seconds, and back to `sPlayerAttack0` for another 0.1 seconds.  Once that's finished, `Animate` automatically resets the player to its default (free) state, and we're done!
 
 <img src="/blog/sprite_stacking/animation.gif" width="50%"/>
 
