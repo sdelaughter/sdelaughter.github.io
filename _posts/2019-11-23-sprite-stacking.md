@@ -176,7 +176,7 @@ This script will help simplify the process of cycling through sprites.  It takes
 
 First you'll need to set up a state machine for your player, the same way you probably would for a regular 2D game.  This defines the core logic of what actions your player is able to take and when.  They'll begin in the "Free" state, in which they can walk around the map.  When a certain button is pressed they'll enter the Attack state, which forces them to stop moving, plays an attack animation, and then returns them to the Free state.
 
-Add variables named `state` and `defaultState` to your player's Create event, both with  initial valued of `PLAYERSTATE.FREE`.  Next, listen for input from the attack button in the player's Step event:
+Add variables named `state` and `defaultState` to your player's Create event, both with  initial values of `PLAYERSTATE.FREE`.  Next, listen for input from the attack button in the player's Step event:
 
 ```
 keyAttack = gamepad_button_check_pressed(0, gp_shoulderr);
