@@ -10,4 +10,4 @@ My current research is focused on measuring and mitigating Denial of Service vul
 
 I am a proud member of the [Electronic Frontier Foundation](https://www.eff.org) and a strong proponent of net neutrality, digital privacy rights, free and open source software, and equitable global Internet access.
 
-In my spare time I make [music](https://sdlwdr.bandcamp.com), [pottery](pottery.md), and [video games](https://samdelaughter.itch.io).  I also volunteer at MIT's radio station [WMBR](https://wmbr.org) where I host a show called [Digital After Dark](http://digitalafterdark.com).
+In my spare time I make [music](https://sdlwdr.bandcamp.com), [pottery](pottery.md), and [video games](https://samdelaughter.itch.io).  I also volunteer at MIT's radio station [WMBR](https://wmbr.org) where I co-host a show called [Digital After Dark](http://digitalafterdark.com).
