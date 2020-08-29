@@ -13,8 +13,8 @@ I also co-host a radio show called [Digital After Dark](https://digitalafterdark
 
 <table style="width:100%" border="5">
   <tr>
-    <td colspan="2">
-      <iframe style="border: 0; width: 700px; height: 700px;" src="https://bandcamp.com/EmbeddedPlayer/album=1513020297/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/classics-vol-1">classics vol. 1 by sdlwdr</a></iframe>
+    <td colspan="2", align="center">
+      <iframe style="border: 0; width: 500px; height: 500px;" src="https://bandcamp.com/EmbeddedPlayer/album=1513020297/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/classics-vol-1">classics vol. 1 by sdlwdr</a></iframe>
     </td>
   </tr>
   <tr>
