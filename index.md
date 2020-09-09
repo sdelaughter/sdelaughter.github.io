@@ -1,10 +1,4 @@
 ---
-layout: home
+layout: index
 title: home
 ---
-
-<p>
-  <font size="108">
-    👋 hello, world
-  </font>
-</p>
