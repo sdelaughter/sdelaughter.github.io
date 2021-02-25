@@ -4,12 +4,9 @@ title: music
 permalink: /music/
 ---
 
-I started recording music around 2007 but have been making it for as long as I can remember.  Mostly I just try to make music I enjoy listening to -- hopefully you enjoy it as well.
+I've been recording music since around 2007 and making it longer than I can remember.  You can listen to my newer albums and EPs below, and more is available on my [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr) pages.
 
-You can listen to my newer albums and EPs below, and more is available on my [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr) pages.  All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-I also co-host a radio show called [Digital After Dark](https://digitalafterdark.com) on [WMBR](https://wmbr.org).
-
+All of my music is self-released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).  In other words: I'm not interested in profiting from it -- if you'd like to use it in a project please let me know, and I hope you enjoy listening.
 
 <table style="width:100%" border="5">
   <tr>
