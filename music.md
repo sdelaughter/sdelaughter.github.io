@@ -4,9 +4,7 @@ title: music
 permalink: /music/
 ---
 
-I've been recording music since around 2007 and making it longer than I can remember.  You can listen to my newer albums and EPs below, and more is available on my [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr) pages.
-
-All of my music is self-released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).  In other words: I'm not interested in profiting from it -- if you'd like to use it in a project please let me know, and I hope you enjoy listening.
+All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).  More available on [bandcamp](https://sdlwdr.bandcamp.com) and [soundcloud](https://soundcloud.com/sdlwdr).
 
 <table style="width:100%" border="5">
   <tr>
