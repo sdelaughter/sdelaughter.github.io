@@ -9,7 +9,7 @@ All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativeco
 <table style="width:100%" border="5">
   <tr>
     <td>
-      <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=1513020297/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/hypnagogia">hypnagogia by sdlwdr</a></iframe>
+      <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=3883365419/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/hypnagogia">hypnagogia by sdlwdr</a></iframe>
     </td>
     <td>
       <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=1513020297/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/classics-vol-1">classics vol. 1 by sdlwdr</a></iframe>
