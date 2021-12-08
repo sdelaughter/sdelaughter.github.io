@@ -5,20 +5,13 @@ permalink: /research/
 ---
 
 # Theses
-- SM Thesis (MIT, 2019):<br>[A Comparative Analysis of Denial of Service Vulnerabilities in Network Protocols](https://dspace.mit.edu/handle/1721.1/121654)
+- [A Comparative Analysis of Denial of Service Vulnerabilities in Network Protocols](https://dspace.mit.edu/handle/1721.1/121654)<br>
+  *SM Thesis, Massachusetts Institute of Technology, February 2019*
 
-<!-- # Conference Papers
-none yet
-
-# Journal Articles
-none yet
+# Conference Papers
+- [Using Proof-of-Work to Mitigate Spoofing-Based Denial of Service Attacks](https://dl.acm.org/doi/10.1145/3488658.3493789)<br>
+  *CoNEXT Student Workshop, December 2021*
 
 # Patents
-none yet -->
-
-# SIGTBD Papers
-Since 2016, the CSAIL Student Committee has hosted an annual April Fools' Day conference known as [SIGTBD](http://sigtbd.csail.mit.edu), "the premier conference in TBD."  Submissions are largely satirical yet often present the most absurd results with the deepest and most careful analysis.  I joined the conference's organizing committee in 2019.
-
-I've had the following papers accepted to SIGTBD, though I should note that the conference typically has a 100% acceptance rate:
-
- - [Character Customization in Fortnite Battle Royale as a Channel for Covert Communication (2018)](fortnite_covert_channels.pdf)
+- [High performance distributed system of record with confidence-based consensus](https://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&d=PG01&s1=20200167779.PGNR)<br>
+  *US Patent Pending, Published May 2020*
