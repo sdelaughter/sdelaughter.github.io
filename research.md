@@ -13,6 +13,6 @@ permalink: /research/
   *CoNEXT Student Workshop, December 2021*
 
 # Patents
-- [High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)<br>
+- [High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/) (Co-Inventor)<br>
   *US Patent Pending, Published May 2020*<br>
   *EU Patent Pending, Published October 2021*
