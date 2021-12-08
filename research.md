@@ -13,5 +13,5 @@ permalink: /research/
   *CoNEXT Student Workshop, December 2021*
 
 # Patents
-- [High Performance Distributed System of Record with Confidence-Based Consensus](https://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&d=PG01&s1=20200167779.PGNR)<br>
+- [High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)<br>
   *US Patent Pending, Published May 2020*
