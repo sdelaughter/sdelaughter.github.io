@@ -14,4 +14,5 @@ permalink: /research/
 
 # Patents
 - [High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)<br>
-  *Patent Pending, Published May 2020*
+  *US Patent Pending, Published May 2020*<br>
+  *EU Patent Pending, Published October 2021*
