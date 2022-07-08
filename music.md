@@ -8,7 +8,7 @@ All of my music is released under a [CC-BY-NC-SA 4.0 license](https://creativeco
 
 <table style="width:100%" border="5">
   <tr>
-    <td colspan="2" text-align="center">
+    <td>
       <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=2963664621/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sdlwdr.bandcamp.com/album/blossom">blossom by sdlwdr</a></iframe>
     </td>
   </tr>
