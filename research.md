@@ -29,5 +29,5 @@ permalink: /research/
 
 # Patents
 - **[High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)**<br>
-  Co-Inventor<br>
+  Co-Inventor, Assigned to Akamai Technologies<br>
   Patent Pending, Published May 2020
