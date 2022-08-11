@@ -18,7 +18,7 @@ permalink: /research/
 
 - **[Using Proof-of-Work to Mitigate Spoofing-Based Denial of Service Attacks](https://dl.acm.org/doi/10.1145/3488658.3493789)**<br>
   Samuel DeLaughter and Karen Sollins<br>
-  CoNEXT Student Workshop<br>
+  CoNEXT-SW '21: Proceedings of the CoNEXT Student Workshop<br>
   December 2021
 
 # Theses
