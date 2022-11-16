@@ -28,7 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sdelaughter.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: sdelaughter
 github_username:  sdelaughter
-twitter_username: samdelaughter
+#twitter_username: samdelaughter
 instagram_username: s.delaughter
 
 
