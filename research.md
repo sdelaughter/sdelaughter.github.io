@@ -6,6 +6,11 @@ permalink: /research/
 
 
 # Conference Papers
+- **[Economic rebalancing of the costs and benefits of Volumetric DDoS mitigation in the Internet: A Case Study of TCP]**<br>
+  Samuel DeLaughter, Karen Sollins, and William Lehr<br>
+  TPRC '23: Proceedings of the 51st Research Conference on Communications, Information and Internet Policy<br>
+  September 2023
+
 - **[Context Matters: Accurately Measuring the Efficacy of Denial-of-Service Mitigations](https://dl.acm.org/doi/10.1145/3546096.3546109)**<br>
   Samuel DeLaughter and Karen Sollins<br>
   CSET '22: Proceedings of the 15th Workshop on Cyber Security Experimentation and Test<br>
@@ -22,10 +27,16 @@ permalink: /research/
   December 2021
 
 # Theses
+  - **[Redistributing the Costs of Volumetric Denial-of-Service Mitigation](phd/thesis.pdf)**<br>
+  PhD Thesis, Massachusetts Institute of Technology<br>
+  Advised by Karen Sollins<br>
+  August 2023
+
   - **[A Comparative Analysis of Denial of Service Vulnerabilities in Network Protocols](https://dspace.mit.edu/handle/1721.1/121654)**<br>
   SM Thesis, Massachusetts Institute of Technology<br>
   Advised by Karen Sollins<br>
   February 2019
+
 
 # Patents
 - **[High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)**<br>
