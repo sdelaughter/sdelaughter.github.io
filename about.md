@@ -4,9 +4,9 @@ title: about
 permalink: /about/
 ---
 
-I am a doctoral candidate in the [Computer Science and Artificial Intelligence Laboratory (CSAIL)](http://csail.mit.edu) at the [Massachusetts Institute of Technology](http://www.mit.edu), working with [Dr. Karen Sollins](http://groups.csail.mit.edu/ana/People/Sollins.html) as a member of the [Advanced Network Architecture group](http://groups.csail.mit.edu/ana/index.html).
+I am currently a postdoctoral scholar at the [UCSD Center for Applied Internet Data Analysis (CAIDA)](https://www.caida.org), and am continuing to work closely with my PhD thesis advisor [Dr. Karen Sollins](http://groups.csail.mit.edu/ana/People/Sollins.html) at the [MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)](http://csail.mit.edu).
 
-My current research is focused on measuring and mitigating Denial of Service vulnerabilities, designing secure and efficient network protocols, analyzing Linux performance bottlenecks, and developing and migrating to [Future Internet Architectures](http://www.nets-fia.net). I'm also interested in Internet governance, distributed consensus, information hiding, protocol obfuscation, censorship detection, and data visualization.
+My research is focused on Denial of Service mitigation, and more broadly on the design and evaluation of network protocols, internet architectures, and other distributed systems.  I'm also interested in Internet governance, censorship detection & avoidance, distributed consensus, and data visualization.
 
 I am a proud member of the [Electronic Frontier Foundation](https://www.eff.org) and a strong proponent of net neutrality, digital privacy rights, free and open source software, and equitable global Internet access.
 
