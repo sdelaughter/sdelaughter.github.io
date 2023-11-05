@@ -8,4 +8,4 @@ I am currently a postdoctoral scholar at the [UCSD Center for Applied Internet D
 
 My research is focused primarily on Denial of Service mitigation, and more broadly on the design and evaluation of network protocols and internet architectures.  I am also interested in Internet governance, censorship detection & avoidance, distributed consensus, and data visualization.
 
-In my spare time I make [music](music.md), [pottery](pottery.md), and [video games](https://samdelaughter.itch.io).
+In my spare time I make [music](music.md), [pottery](pottery.md), and [video games](https://snail-dream.itch.io).
