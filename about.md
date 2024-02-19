@@ -8,4 +8,4 @@ I am currently a Postdoctoral Scholar at the [UCSD Center for Applied Internet D
 
 My research focuses on measuring Denial-of-Service vulnerabilities in the Internet, and on designing, implementing, and deploying more inherently DoS-resilient protocols and architectures.  My other research interests include Internet governance, privacy and anonymity, distributed consensus, peer-to-peer networks, and data visualization.
 
-In my spare time I make [music](music.md), [pottery](pottery.md), and [video games](https://samdelaughter.itch.io).
+In my spare time I make [music](music.md), [pottery](pottery.md), and [video games](https://snail-dream.itch.io).
