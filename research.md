@@ -6,7 +6,7 @@ permalink: /research/
 
 
 # Conference Papers
-- **[Economic rebalancing of the costs and benefits of Volumetric DDoS mitigation in the Internet: A Case Study of TCP](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4524254)**<br>
+- **[Economic Rebalancing of the Costs and Benefits of Volumetric DDoS Mitigation in the Internet: A Case Study of TCP](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4524254)**<br>
   Samuel DeLaughter, Karen Sollins, and William Lehr<br>
   TPRC '23: Proceedings of the 51st Research Conference on Communications, Information and Internet Policy<br>
   September 2023
