@@ -13,12 +13,12 @@ A few weeks ago I started working on a new game using a graphical technique call
 
 It lets you turn a set of images like this:
 
-![](/blog/sprite_stacking/pyramid_sprites.png)
+![](/devlog/sprite_stacking/pyramid_sprites.png)
 
 into an object like this:
 
-<!-- ![](/blog/sprite_stacking/pyramid2.gif) -->
-<img src="/blog/sprite_stacking/pyramid.gif" width="50%"/>
+<!-- ![](/devlog/sprite_stacking/pyramid2.gif) -->
+<img src="/devlog/sprite_stacking/pyramid.gif" width="50%"/>
 
 To my knowledge only a handful of games have been made this way:
  - Nium ([gameplay](https://youtu.be/iAJ-tyiUVag?t=2270) / [purchase](https://juegosrancheros.itch.io/fantastic-arcade-2016))
@@ -38,7 +38,7 @@ You may have also noticed that the gif above appears to have shadows, with the s
 # Creating a 3D Model
 The first step is to make a voxel model for your character. [MagicaVoxel](https://ephtracy.github.io) is a nice piece of free multi-platform software you can use for this.  I'll assume that's what you're using for the rest of this section and the following one.
 
-<img style="float: right; margin: 15px 15px 15px 15px;" src="/blog/sprite_stacking/MagicaVoxel.png" width="50%" alt="MagicaVoxel"/>
+<img style="float: right; margin: 15px 15px 15px 15px;" src="/devlog/sprite_stacking/MagicaVoxel.png" width="50%" alt="MagicaVoxel"/>
 
 Take note of the three numbers circled in red in this image, they are your model's `X`, `Y`, and `Z` dimensions.  You'll need them in the next section, and it's important to set them properly before you start making a new model.
 
@@ -141,7 +141,7 @@ This just updates the object's draw depth relative to both its x/y coordinates i
 
 The `- 1000` at the end of the second line is very important.  The amount you need to subtract will vary depending on the size of your room but it doesn't have to be precise, just sufficiently large.  Objects with higher depth values are drawn farther away from the camera, with the background layer at `depth = 100`.  This means anything with `depth > 100` gets drawn behind the background, making it invisible.  If you don't subtract some large number from everything's depth, things will start to disappear at certain camera angles, like so:
 
-![](/blog/sprite_stacking/rotation_problem.gif)
+![](/devlog/sprite_stacking/rotation_problem.gif)
 
 # Adding Animations
 Now we're ready to animate our player.  Since we're already using sprite frames to give our objects height, we can't use them for animation as intended.  Instead, you'll need to make a new voxel model for every frame of animation and make your object cycle through them manually.  Creating these models will almost certainly be the most time consuming part of making a sprite-stacked game.  You're on your own for that part, but I'll walk you through the full process of coding a simple three-frame animation.
@@ -226,7 +226,7 @@ Animate(oPlayer, animation);
 
 This assumes you have created two new sprites named `sPlayerAttack0` and `sPlayerAttack1`.  When the `Animate` script is called, it will change the sprite of the player object to `sPlayerAttack0` for 0.1 seconds, to `sPlayerAttack1` for 0.1 seconds, and back to `sPlayerAttack0` for another 0.1 seconds.  Once that's finished, `Animate` automatically resets the player to its default (free) state, and we're done!
 
-<img src="/blog/sprite_stacking/animation.gif" width="50%"/>
+<img src="/devlog/sprite_stacking/animation.gif" width="50%"/>
 
 # Adding Shadows
 As I mentioned in the introduction, there's a simple way to add shadows to your sprite-stacked objects which will greatly enhance the 3D effect.  Just follow these steps:

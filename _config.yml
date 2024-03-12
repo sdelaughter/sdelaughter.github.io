@@ -40,7 +40,7 @@ plugins:
 # Header Links
 header_pages:
   - about.md
-  - blog.md
+  - devlog.md
   - research.md
   - pottery.md
   - music.md
