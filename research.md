@@ -6,6 +6,16 @@ permalink: /research/
 
 
 # Conference Papers
+- **How HTTP/3 and QUIC are Reshaping the Internet**<br>
+  Samuel DeLaughter and Karen Sollins<br>
+  TPRC '24: Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy<br>
+  September 2024 (Accepted)
+
+- **The Economics of DDoS Mitigation and Changing Internet Protocols**<br>
+  Samuel DeLaughter, Karen Sollins, and William Lehr<br>
+  TPRC '24: Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy<br>
+  September 2024 (Accepted)
+
 - **[Economic Rebalancing of the Costs and Benefits of Volumetric DDoS Mitigation in the Internet: A Case Study of TCP](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4524254)**<br>
   Samuel DeLaughter, Karen Sollins, and William Lehr<br>
   TPRC '23: Proceedings of the 51st Research Conference on Communications, Information and Internet Policy<br>
