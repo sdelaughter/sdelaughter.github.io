@@ -9,7 +9,7 @@ tags: game-dev programming GameMaker
 {:toc}
 
 # Introduction
-A few weeks ago I started working on a new game using a graphical technique called sprite stacking, which creates the appearance of a 3D character and environment by layering multiple 2D images to draw each game object.
+A few weeks ago I started working on [a new game](https://snail-dream.itch.io/leaf-catching) using a graphical technique called sprite stacking, which creates the appearance of a 3D character and environment by layering multiple 2D images to draw each game object.
 
 It lets you turn a set of images like this:
 
