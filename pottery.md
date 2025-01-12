@@ -22,7 +22,7 @@ permalink: /pottery/
     <td colspan="12"><img src="mug.jpg" alt="mug"></td>
   </tr>
   <tr>
-    <td colspan="12">mug | celadon | 2024</td>
+    <td colspan="12">mug | celadon & shino | 2024</td>
   </tr>
 
 
