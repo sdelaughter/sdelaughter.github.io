@@ -12,8 +12,7 @@ Outbound traffic *can* be manipulated in a similar way using eBPF, of which XDP 
 
 In most cases eBPF is probably the better choice, but if you do want egress XDP, it can be implemented in a roundabout way by making use of Linux VETH (virtual ethernet) pairs.  The basic concept is to first send traffic to yourself from inside a virtual namespace, handle it with an XDP program when "receiving" it on a virtual interface, and then forward it out the regular interface.  Step-by-step instructions are provided below, with the VETH configuration steps adapted in large part from [this](https://superuser.com/a/765078) Stack Exchange answer.  I've structured them as a single bash script so you should be able to copy and paste after configuring (at minimum) the device name of the network interface you want to send from.
 
-<img src="/assets/exgress_xdp_namespaces.png" width="50%"/>
-![Virtual Namespace and VETH Pair Configuration](/assets/egress_xdp_namespaces.png)
+<img src="/assets/egress_xdp_namespaces.png" width="50%"/>
 
 # Code
 
