@@ -5,7 +5,7 @@ date:   2024-10-25
 tags:   game-dev, modding, UFO-50, GameMaker
 ---
 
-I've recently started making mods for [UFO 50](https://50games.fun), a phenomenal game (really 50+ different games) that everyone should play.  There's a great [guide](https://discord.com/channels/525973026429206530/1297055481746952294) for getting started making UFO 50 mods on the game's official Discord server, but I thought it might be helpful to document some tips and techniques for modding specific aspects of the game, starting with title screens.  As an example, I'll walk through the process of adding an endless mode to the game Magic Garden.  If you just want to play a completed version of that mod, you can download it (along with my other UFO 50 mods) [here](https://github.com/sdlwdr/UFO50_Mods).
+I've recently started making mods for [UFO 50](https://50games.fun), a phenomenal game (really 50+ different games) that everyone should play.  There's a great [guide](https://discord.com/channels/525973026429206530/1297055481746952294) for getting started making UFO 50 mods on the game's official Discord server, but I thought it might be helpful to document some tips and techniques for modding specific aspects of the game, starting with title screens.  As an example, I'll walk through the process of adding an endless mode to the game Magic Garden.
 
 All 50 sub-games (they are *much* more than "mini-games") use the same `oTitleScreens` object.  Each game is assigned one of 18 "menu styles" which define the basic layout of the title screen.  Magic Garden is assigned menu style 3 in line 10 of `gml_GlobalScript_scr27_Meta`:
 
