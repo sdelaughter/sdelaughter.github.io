@@ -25,18 +25,18 @@ permalink: /pottery/
   </tr>
 
   <tr>
-    <td colspan="12">fruit bowl | celadon | 2022</td>
-  </tr>
-  <tr>
-    <td colspan="12"><img src="fruit_bowl.jpg" alt="fruit bowl"></td>
-  </tr>
-
-  <tr>
     <td colspan="12">utensil holder | celadon & shino | 2024</td>
   </tr>
   <tr>
     <td colspan="6"><img src="utensil_holder.jpg" alt="utensil holder"></td>
     <td colspan="6"><img src="utensil_holder_top.jpg" alt="utensil holder"></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">fruit bowl | celadon | 2022</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="fruit_bowl.jpg" alt="fruit bowl"></td>
   </tr>
 
   <tr>
