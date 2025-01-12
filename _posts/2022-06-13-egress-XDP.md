@@ -12,7 +12,7 @@ Outbound traffic *can* be manipulated in a similar way using eBPF, of which XDP 
 
 In most cases eBPF is probably the better choice, but if you do want egress XDP, it can be implemented in a roundabout way by making use of Linux VETH (virtual ethernet) pairs.  The basic concept is to first send traffic to yourself from inside a virtual namespace, handle it with an XDP program when "receiving" it on a virtual interface, and then forward it out the regular interface.  Step-by-step instructions are provided below, with the VETH configuration steps adapted in large part from [this](https://superuser.com/a/765078) Stack Exchange answer.  I've structured them as a single bash script so you should be able to copy and paste after configuring (at minimum) the device name of the network interface you want to send from.
 
-![Virtual Namespace and VETH Pair Configuration](assets/egress_xdp_namespaces.png)
+![Virtual Namespace and VETH Pair Configuration](/assets/egress_xdp_namespaces.png)
 
 # Code
 
@@ -81,4 +81,4 @@ Any traffic you generate from this session will be processed by XDP before being
 
 Naturally there is some amount of overhead to this approach since we're adding a layer of NATing to the system, but it's not much.  In measuring 100,000 pings, containerization adds an average of ~0.015ms of latency to each request.
 
-![](assets/egress_xdp_benchmark.png)
+![](/assets/egress_xdp_benchmark.png)
