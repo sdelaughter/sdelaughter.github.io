@@ -10,19 +10,21 @@ permalink: /pottery/
   </tr>
 
   <tr>
-    <td colspan="12"><img src="mug.jpg" alt="mug"></td>
-  </tr>
-  <tr>
-    <td colspan="12">mug | celadon | 2024</td>
-  </tr>
-
-  <tr>
     <td colspan="6"><img src="teapot_closed.jpg" alt="teapot"></td>
     <td colspan="6"><img src="teapot_open.jpg" alt="teapot (open)"></td>
   </tr>
   <tr>
     <td colspan="12">teapot | celadon | 2024</td>
   </tr>
+
+
+  <tr>
+    <td colspan="12"><img src="mug.jpg" alt="mug"></td>
+  </tr>
+  <tr>
+    <td colspan="12">mug | celadon | 2024</td>
+  </tr>
+
 
   <tr>
     <td colspan="12"><img src="fruit_bowl.jpg" alt="fruit_bowl"></td>
