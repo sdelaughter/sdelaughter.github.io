@@ -5,9 +5,6 @@ date: 2022-06-13
 tags: networks XDP eBPF Linux DoS
 ---
 
-* TOC
-{:toc}
-
 # Introduction
 [XDP (eXpress Data Path)](https://www.iovisor.org/technology/xdp) enables high performance analysis, modification, and redirection of Linux network traffic.  XDP Programs can be written and launched from user space at run-time, but are executed in the kernel, providing a terrific combination of speed and usability. They act on packets almost immediately upon receipt, before a socket buffer is allocated, which can enable extremely efficient DoS mitigation, protocol translation, overlay network routing, etc.  The two downsides are that programs a) must pass a fairly strict verifier, and b) can only operate on inbound traffic.  There are plenty of other posts describing how to write programs that will pass the XDP verifier.  The inbound-only restriction seems to be generally accepted as unavoidable, but with a layer of indirection egress XDP is possible.
 
@@ -15,7 +12,9 @@ Outbound traffic *can* be manipulated in a similar way using eBPF, of which XDP 
 
 In most cases eBPF is probably the better choice, but if you do want egress XDP, it can be implemented in a roundabout way by making use of Linux VETH (virtual ethernet) pairs.  The basic concept is to first send traffic to yourself from inside a virtual namespace, handle it with an XDP program when "receiving" it on a virtual interface, and then forward it out the regular interface.  Step-by-step instructions are provided below, with the VETH configuration steps adapted in large part from [this](https://superuser.com/a/765078) Stack Exchange answer.  I've structured them as a single bash script so you should be able to copy and paste after configuring (at minimum) the device name of the network interface you want to send from.
 
-![Virtual Namespace and VETH Pair Configuration](assets/egress_xdp_namespaces.png "Virtual Namespace and VETH Pair Configuration")
+![Virtual Namespace and VETH Pair Configuration](assets/egress_xdp_namespaces.png)
+
+# Code
 
 ```
 #Set the name of the device you want to send from
@@ -78,6 +77,8 @@ ip netns exec eXDP bash &
 
 Any traffic you generate from this session will be processed by XDP before being sent.
 
+# Performance Analysis
+
 Naturally there is some amount of overhead to this approach since we're adding a layer of NATing to the system, but it's not much.  In measuring 100,000 pings, containerization adds an average of ~0.015ms of latency to each request.
 
-![Performance Evaluation](assets/egress_xdp_benchmark.png "Performance Evaluation")
+![](assets/egress_xdp_benchmark.png)
