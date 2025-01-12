@@ -5,6 +5,9 @@ date: 2022-06-13
 tags: networks XDP eBPF Linux DoS
 ---
 
+* TOC
+{:toc}
+
 # Introduction
 [XDP (eXpress Data Path)](https://www.iovisor.org/technology/xdp) enables high performance analysis, modification, and redirection of Linux network traffic.  XDP Programs can be written and launched from user space at run-time, but are executed in the kernel, providing a terrific combination of speed and usability. They act on packets almost immediately upon receipt, before a socket buffer is allocated, which can enable extremely efficient DoS mitigation, protocol translation, overlay network routing, etc.  The two downsides are that programs a) must pass a fairly strict verifier, and b) can only operate on inbound traffic.  There are plenty of other posts describing how to write programs that will pass the XDP verifier.  The inbound-only restriction seems to be generally accepted as unavoidable, but with a layer of indirection egress XDP is possible.
 
