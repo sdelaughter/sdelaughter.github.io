@@ -13,9 +13,11 @@ tags: networks XDP eBPF Linux DoS
 
 Outbound traffic *can* be manipulated in a similar way using eBPF, of which XDP is an extension, but there are important differences.  Most notable is that XDP programs operate on raw ethernet frames immediately after a packet is received, while regular eBPF programs operate on sk_buff (socket buffer) structs.  In some cases sk_buffs are easier to work with, as they expose additional metadata and helper functions that facilitate packet parsing and modification.  Yet this metadata can also be burdensome when performing certain modifications, as it requires additional bookkeeping.  For example, say you want to modify the initial sequence number of a TCP SYN -- it's not sufficient to modify the bits of the sequence number field in the first packet you send, you must also update metadata that tracks the socket's ISN.  XDP programs have no such metadata and therefore no such restrictions.
 
-In most cases eBPF is probably the better choice, but if you do want egress XDP, it can be implemented in a roundabout way by making use of Linux VETH (virtual ethernet) pairs.  The basic concept is to first send traffic to yourself from inside a virtual namespace, handle it with an XDP program when "receiving" it on a virtual interface, and then forward it out the regular interface.  Step-by-step instructions are provided below, with the VETH configuration steps adapted in large part from [this](https://superuser.com/a/765078) Stack Exchange answer.  I've structured them as a single bash script so you should be able to copy and paste after configuring (at minimum) the device name of the network interface you want to send from.
+In most cases eBPF is probably the better choice, but if you do want egress XDP, it can be implemented in a roundabout way by making use of Linux VETH (virtual ethernet) pairs.  The basic concept is to first send traffic to yourself from inside a virtual namespace, handle it with an XDP program when "receiving" it on a virtual interface, and then forward it out the regular interface.
 
 <img src="/assets/egress_xdp_namespaces.png" width="50%"/>
+
+Step-by-step instructions are provided below, with the VETH configuration steps adapted in large part from [this](https://superuser.com/a/765078) Stack Exchange answer.  I've structured them as a single bash script so you should be able to copy and paste after configuring (at minimum) the device name of the network interface you want to send from.
 
 # Code
 
