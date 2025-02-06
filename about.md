@@ -4,6 +4,8 @@ title: about
 permalink: /about/
 ---
 
-Hi, I'm Sam! I'm a computer scientist whose research focuses on measuring Denial-of-Service vulnerabilities in the Internet, and on designing, implementing, and deploying more inherently DoS-resilient protocols and architectures.  My other research interests include Internet governance, privacy and anonymity, distributed consensus, peer-to-peer networks, and data visualization.
+I am a computer scientist, game developer, potter, and musician.
 
-In my spare time I make [video games](https://snail-dream.itch.io), [pottery](pottery.md), and [music](music.md).
+My research has primarily focused on the design and analysis of network protocols, internet architectures, and other distributed systems.  I am interested in Denial-of-Service mitigation, Internet governance, privacy and anonymity, consensus protocols, data visualization, and many many other things.
+
+You can read my [papers](research.md), play my [games](https://snail-dream.itch.io), look at some of my [pottery](pottery.md), and listen to my [music](music.md) for free.
