@@ -6,6 +6,11 @@ permalink: /research/
 
 
 # Conference Papers
+- **SYN Proof-of-Work: Improving Volumetric DoS Resilience in TCP**<br>
+  1st author, with Karen Sollins<br>
+  IEEE S&P '25: Proceedings of the 46th IEEE Symposium on Security and Privacy<br>
+  *May 2025 (Accepted)*
+
 - **[The Economics of DDoS Mitigation and Changing Internet Protocols](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4916659)**<br>
   1st author, with Karen Sollins and William Lehr<br>
   TPRC '24: Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy<br>
