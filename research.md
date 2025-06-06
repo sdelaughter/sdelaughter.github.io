@@ -9,7 +9,7 @@ permalink: /research/
 - **SYN Proof-of-Work: Improving Volumetric DoS Resilience in TCP**<br>
   1st author, with Karen Sollins<br>
   IEEE S&P '25: Proceedings of the 46th IEEE Symposium on Security and Privacy<br>
-  *May 2025 (Accepted)*
+  *May 2025*
 
 - **[The Economics of DDoS Mitigation and Changing Internet Protocols](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4916659)**<br>
   1st author, with Karen Sollins and William Lehr<br>
@@ -49,6 +49,6 @@ permalink: /research/
 
 
 # Patents
-- **[High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US20200167779A1/)**<br>
+- **US12277559B2: [High Performance Distributed System of Record with Confidence-Based Consensus](https://patents.google.com/patent/US12277559B2/)**<br>
   Co-Inventor, Assigned to Akamai Technologies<br>
-  *Patent Pending, Published May 2020*
+  *Filed 11/27/19, Granted 4/15/25*
