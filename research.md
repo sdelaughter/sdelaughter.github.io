@@ -6,7 +6,7 @@ permalink: /research/
 
 
 # Conference Papers
-- **SYN Proof-of-Work: Improving Volumetric DoS Resilience in TCP**<br>
+- **[SYN Proof-of-Work: Improving Volumetric DoS Resilience in TCP](https://www.computer.org/csdl/proceedings-article/sp/2025/223600b783/26hiUx9kMCY)**<br>
   1st author, with Karen Sollins<br>
   IEEE S&P '25: Proceedings of the 46th IEEE Symposium on Security and Privacy<br>
   *May 2025*
