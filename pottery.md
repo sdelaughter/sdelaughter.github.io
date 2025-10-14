@@ -51,7 +51,7 @@ permalink: /pottery/
   <tr>
     <td colspan="6"><img src="planter.jpeg" alt=""></td>
     <!-- <td colspan="6"><img src="planter-b.jpeg" alt=""></td> -->
-    <td colspan="6"><img src="planter-1jpeg" alt=""></td>
+    <td colspan="6"><img src="planter-1.jpeg" alt=""></td>
     <!-- <td colspan="6"><img src="planter-1-b.jpeg" alt=""></td> -->
   </tr>
 
