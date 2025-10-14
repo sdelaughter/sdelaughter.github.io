@@ -95,6 +95,13 @@ permalink: /pottery/
   </tr>
 
   <tr>
+    <td colspan="12">lidded jar | celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="lidded-jar.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
     <td colspan="12">small lidded jar | celadon | 2025</td>
   </tr>
   <tr>
