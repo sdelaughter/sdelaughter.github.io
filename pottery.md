@@ -24,13 +24,6 @@ permalink: /pottery/
     <td colspan="6"><img src="vase-portugal-slip-b.jpeg" alt=""></td>
   </tr>
 
-   <tr>
-    <td colspan="12">small vase | shino * celadon | 2025</td>
-  </tr>
-  <tr>
-    <td colspan="12"><img src="mug-white.jpeg" alt=""></td>
-  </tr>
-
   <tr>
     <td colspan="12">small vase | shino & celadon | 2025</td>
   </tr>
@@ -59,8 +52,6 @@ permalink: /pottery/
   <tr>
     <td colspan="6"><img src="planter.jpeg" alt=""></td>
     <td colspan="6"><img src="planter-b.jpeg" alt=""></td>
-  </tr>
-  <tr>
     <td colspan="6"><img src="planter-1jpeg" alt=""></td>
     <td colspan="6"><img src="planter-1-b.jpeg" alt=""></td>
   </tr>
@@ -274,7 +265,7 @@ permalink: /pottery/
     <td colspan="12">coffee pourover | butterscotch & celadon | 2024</td>
   </tr>
   <tr>
-    <td colspan="12"><img src="mug-white.jpeg" alt=""></td>
+    <td colspan="12"><img src="pourover.jpeg" alt=""></td>
   </tr>
 
   <tr>
