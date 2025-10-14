@@ -10,6 +10,244 @@ permalink: /pottery/
   </tr>
 
   <tr>
+    <td colspan="12">mixing bowl | celadon & floating blue | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mixing-bowl-snails.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">vase | salt fired w/ white slip | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="vase-portugal-slip.jpeg" alt=""></td>
+    <td colspan="6"><img src="vase-portugal-slip-b.jpeg" alt=""></td>
+  </tr>
+
+   <tr>
+    <td colspan="12">small vase | shino * celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mug-white.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small vase | shino & celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="vase-small.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">utensil holder | shino & celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="utensil-holder-tall.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">sponge holder | wannamaker | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="sponge-holder.jpeg" alt=""></td>
+    <td colspan="6"><img src="sponge-holder-b.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">planter pair | jade & licorice | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="planter.jpeg" alt=""></td>
+    <td colspan="6"><img src="planter-b.jpeg" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="planter-1jpeg" alt=""></td>
+    <td colspan="6"><img src="planter-1-b.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">pierced double-walled form | wannamaker, bvg oribe, & assad black | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="4"><img src="pierced-votive.jpeg" alt=""></td>
+    <td colspan="4"><img src="pierced-votive-b.jpeg" alt=""></td>
+    <td colspan="4"><img src="pierced-votive-c.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">orchid pot pair | amber crackle | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="orchid-pot.jpeg" alt=""></td>
+    <td colspan="6"><img src="orchid-pot-1.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small mug | nova white | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mug-white.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small mug | psionic celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mug-snail.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">mug pair | kallax blonde | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mug-pair.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small lidded jar | celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="lidded-jar-sm.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">fruit bowl | egg & assad black | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="fruit-bowl-1.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">cup pair | floating pink & assad black | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-watermelon.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bud vase | wannamaker | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="vase-sm-snail.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bud vase | floating pink | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="vase-sm-pink.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small vase | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="vase-portugal-slant.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small cup | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-portugal-md-2.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small cups | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-portugal-md-1.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small cups | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-portugal-md.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">mini cups | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-portugal-sm-1.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">mini cups | salt fired | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cups-portugal-sm.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">cup | butterscotch & celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cup-yellow-1.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">cup | kallax blonde w/ assad black snails | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="cup-white-snails.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bowl pair | kallax blonde & nova white | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="4"><img src="bowls-white-md-b.jpeg" alt=""></td>
+    <td colspan="8"><img src="bowls-white-md.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bowl | psionic celadon | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="bowl-snail.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">stacking bowls | amber crackle | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="4"><img src="bowl-set-yellow.jpeg" alt=""></td>
+    <td colspan="8"><img src="bowl-set-yellow-b.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bowl with pour lip | jade & licorice | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="bowl-pour.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">small bowl | assad black | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="bowl-sm-black.jpeg" alt="bowl"></td>
+    <td colspan="6"><img src="bowl-sm-black-b.jpeg" alt="bowl"></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bowl | assad black | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="6"><img src="bowl-md-black.jpeg" alt="bowl"></td>
+    <td colspan="6"><img src="bowl-md-black-b.jpeg" alt="bowl"></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">bowl | tobacco | 2025</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="bowl-brown.jpeg" alt=""></td>
+  </tr>
+
+  <tr>
     <td colspan="12">teapot | celadon | 2024</td>
   </tr>
   <tr>
@@ -30,6 +268,13 @@ permalink: /pottery/
   <tr>
     <td colspan="6"><img src="utensil_holder.jpg" alt="utensil holder"></td>
     <td colspan="6"><img src="utensil_holder_top.jpg" alt="utensil holder"></td>
+  </tr>
+
+  <tr>
+    <td colspan="12">coffee pourover | butterscotch & celadon | 2024</td>
+  </tr>
+  <tr>
+    <td colspan="12"><img src="mug-white.jpeg" alt=""></td>
   </tr>
 
   <tr>
