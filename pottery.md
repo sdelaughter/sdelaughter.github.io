@@ -20,8 +20,7 @@ permalink: /pottery/
     <td colspan="12">vase | salt fired w/ white slip | 2025</td>
   </tr>
   <tr>
-    <td colspan="6"><img src="vase-portugal-slip.jpeg" alt=""></td>
-    <td colspan="6"><img src="vase-portugal-slip-b.jpeg" alt=""></td>
+    <td colspan="12"><img src="vase-portugal-slip.jpeg" alt=""></td>
   </tr>
 
   <tr>
@@ -42,8 +41,8 @@ permalink: /pottery/
     <td colspan="12">sponge holder | wannamaker | 2025</td>
   </tr>
   <tr>
-    <td colspan="6"><img src="sponge-holder.jpeg" alt=""></td>
-    <td colspan="6"><img src="sponge-holder-b.jpeg" alt=""></td>
+    <!-- <td colspan="6"><img src="sponge-holder.jpeg" alt=""></td> -->
+    <td colspan="12"><img src="sponge-holder-b.jpeg" alt=""></td>
   </tr>
 
   <tr>
@@ -51,9 +50,9 @@ permalink: /pottery/
   </tr>
   <tr>
     <td colspan="6"><img src="planter.jpeg" alt=""></td>
-    <td colspan="6"><img src="planter-b.jpeg" alt=""></td>
+    <!-- <td colspan="6"><img src="planter-b.jpeg" alt=""></td> -->
     <td colspan="6"><img src="planter-1jpeg" alt=""></td>
-    <td colspan="6"><img src="planter-1-b.jpeg" alt=""></td>
+    <!-- <td colspan="6"><img src="planter-1-b.jpeg" alt=""></td> -->
   </tr>
 
   <tr>
