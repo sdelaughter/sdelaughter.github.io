@@ -4,8 +4,8 @@ title: about
 permalink: /about/
 ---
 
-I am currently a Postdoctoral Scholar at the [UCSD Center for Applied Internet Data Analysis (CAIDA)](https://www.caida.org), and am continuing to work closely with my PhD thesis advisor [Dr. Karen Sollins](http://groups.csail.mit.edu/ana/People/Sollins.html) at the [MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)](http://csail.mit.edu).
+I am a computer scientist, game developer, potter, and musician.
 
-My research focuses on measuring Denial-of-Service vulnerabilities in the Internet, and on designing, implementing, and deploying more inherently DoS-resilient protocols and architectures.  My other research interests include Internet governance, privacy and anonymity, distributed consensus, peer-to-peer networks, and data visualization.
+My research has primarily focused on the design and analysis of network protocols, internet architectures, and other distributed systems.  I am interested in Denial-of-Service mitigation, Internet governance, privacy and anonymity, consensus protocols, data visualization, and many many other things.
 
-In my spare time I make [music](music.md), [pottery](pottery.md), and [video games](https://snail-dream.itch.io).
+You can read my [papers](research.md), play my [games](https://snail-dream.itch.io), look at some of my [pottery](pottery.md), and listen to my [music](music.md) for free.
