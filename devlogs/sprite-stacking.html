@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sam DeLaughter</title>
+      <link href="/main.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+      <header>
+        <h1>Sam DeLaughter</h1>
+        <hr>
+        <h3>
+          <div text-align:right>
+            <a href="/">about</a> | 
+            <a href="/devlog">devlog</a> | 
+            <a href="/research">research</a> | 
+            <a href="/pottery">pottery</a> | 
+            <a href="/music">music</a>
+          </div>
+        <hr>
+        </h3>
+      </header>
+      
+      <article class="post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sprite Stacking: How to Make a 3D Game with a 2D Engine</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-04-10T00:00:00+00:00" itemprop="datePublished">Apr 10, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#creating-a-3d-model" id="markdown-toc-creating-a-3d-model">Creating a 3D Model</a></li>
+  <li><a href="#importing-a-3d-model-into-gamemaker" id="markdown-toc-importing-a-3d-model-into-gamemaker">Importing a 3D Model into GameMaker</a></li>
+  <li><a href="#drawing-and-scaling-a-3d-model" id="markdown-toc-drawing-and-scaling-a-3d-model">Drawing and Scaling a 3D Model</a></li>
+  <li><a href="#moving-the-camera" id="markdown-toc-moving-the-camera">Moving the Camera</a></li>
+  <li><a href="#moving-your-player" id="markdown-toc-moving-your-player">Moving Your Player</a></li>
+  <li><a href="#setting-the-draw-depth-for-multiple-3d-objects" id="markdown-toc-setting-the-draw-depth-for-multiple-3d-objects">Setting the Draw Depth for Multiple 3D Objects</a></li>
+  <li><a href="#adding-animations" id="markdown-toc-adding-animations">Adding Animations</a></li>
+  <li><a href="#adding-shadows" id="markdown-toc-adding-shadows">Adding Shadows</a></li>
+</ul>
+
+<h1 id="introduction">Introduction</h1>
+<p>A few weeks ago I started working on <a href="https://snail-dream.itch.io/leaf-catching">a new game</a> using a graphical technique called sprite stacking, which creates the appearance of a 3D character and environment by layering multiple 2D images to draw each game object.</p>
+
+<p>It lets you turn a set of images like this:</p>
+
+<p><img src="/devlogs/sprite_stacking/pyramid_sprites.png" alt=""></p>
+
+<p>into an object like this:</p>
+
+<p><img src="/devlogs/sprite_stacking/pyramid.gif" width="50%"></p>
+
+<p>To my knowledge only a handful of games have been made this way:</p>
+<ul>
+  <li>Nium (<a href="https://youtu.be/iAJ-tyiUVag?t=2270">gameplay</a> / <a href="https://juegosrancheros.itch.io/fantastic-arcade-2016">purchase</a>)</li>
+  <li>Step (<a href="https://tak.itch.io/step">free download</a>)</li>
+  <li>Lisa (<a href="https://rubna.itch.io/lisa">free download</a>)</li>
+</ul>
+
+<p>The developer of Nium, <a href="https://twitter.com/moppin_?lang=en">Ojiro Fumoto</a>, gave an interesting <a href="https://www.youtube.com/watch?v=iAJ-tyiUVag">interview</a> in which he discusses the technique.  There are a few good tutorials (notably <a href="https://medium.com/@avsnoopy/beginners-guide-to-sprite-stacking-in-gamemaker-studio-2-and-magica-voxel-part-1-f7a1394569c0">here</a>, <a href="http://www.like100bears.com/writing/2d-3d-in-gamemaker-studio">here</a>, and <a href="https://www.youtube.com/watch?v=sNgb3guusMA">here</a>) covering the very basics of sprite stacking in GameMaker, but I couldn’t find any that cover how to animate sprite-stacked entities or preserve the 3D effect while rotating the game’s camera.</p>
+
+<p>This post will walk through all the information you need to start making your own sprite-stacked game in GameMaker Studio 2.  You’ll learn how to:</p>
+<ul>
+  <li>Create and import a 3D model</li>
+  <li>Draw, scale, move, and animate 3D objects</li>
+  <li>Draw multiple objects at the proper depth</li>
+  <li>Rotate the camera</li>
+</ul>
+
+<p>You may have also noticed that the gif above appears to have shadows, with the side of each level in the pyramid being drawn darker than the top.  I’ll explain how to do that as well – it’s easier than you might think.</p>
+
+<h1 id="creating-a-3d-model">Creating a 3D Model</h1>
+<p>The first step is to make a voxel model for your character. <a href="https://ephtracy.github.io">MagicaVoxel</a> is a nice piece of free multi-platform software you can use for this.  I’ll assume that’s what you’re using for the rest of this section and the following one.</p>
+
+<p><img style="float: right; margin: 15px 15px 15px 15px;" src="/devlogs/sprite_stacking/MagicaVoxel.png" width="50%" alt="MagicaVoxel"></p>
+
+<p>Take note of the three numbers circled in red in this image, they are your model’s <code class="language-plaintext highlighter-rouge">X</code>, <code class="language-plaintext highlighter-rouge">Y</code>, and <code class="language-plaintext highlighter-rouge">Z</code> dimensions.  You’ll need them in the next section, and it’s important to set them properly before you start making a new model.</p>
+
+<p>Larger models are harder to animate, require more memory to store, and require more processing power to draw.  Taller models are particularly resource-intensive as GameMaker will store each vertical layer as a separate file.  Personally I wouldn’t go much larger than 20x20x20, though modern platforms could probably handle a game with considerably higher-resolution models if you have the patience to make them.  It’s generally a good idea to use odd numbers for your model’s <code class="language-plaintext highlighter-rouge">X</code> and <code class="language-plaintext highlighter-rouge">Y</code> dimensions so that it has a precise center point to rotate around.</p>
+
+<p>Note that you can save a step in the next section by drawing your model facing to the right, rather than towards the camera like the default models.</p>
+
+<p>Once you’ve finished making your model, open the <code class="language-plaintext highlighter-rouge">Export</code> menu in the bottom right corner, select <code class="language-plaintext highlighter-rouge">slice</code>, and save it wherever you’d like.  This creates a single <code class="language-plaintext highlighter-rouge">.png</code> file that GameMaker will divide into the component images for the vertical layers.</p>
+
+<h1 id="importing-a-3d-model-into-gamemaker">Importing a 3D Model into GameMaker</h1>
+<ol>
+  <li>Create a new sprite in GameMaker.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Edit Image</code>, select the menu item <code class="language-plaintext highlighter-rouge">Image -&gt; Import Strip Image</code>, and open the file you just exported from MagicaVoxel.</li>
+  <li>You’ll be prompted to enter a few parameters which relate to the dimensions of your model.  Set <code class="language-plaintext highlighter-rouge">Number of Frames = Z</code>, <code class="language-plaintext highlighter-rouge">Frame Width = X</code>, and <code class="language-plaintext highlighter-rouge">Frame Height = Y</code>.  You should be able to keep the defaults for everything else (<code class="language-plaintext highlighter-rouge">Frames per Row = 1</code> and <code class="language-plaintext highlighter-rouge">0</code> for the rest).</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Convert</code>.</li>
+  <li>You will probably need to select the menu item <code class="language-plaintext highlighter-rouge">Image -&gt; Reverse Frames</code> to prevent your model from being drawn upside down.</li>
+  <li>If you created your model facing towards the camera instead of to the right, select the menu item <code class="language-plaintext highlighter-rouge">Image -&gt;  Rotate All Frames (anti-clockwise 90)</code>.</li>
+</ol>
+
+<p>The result should be a sprite with one frame per vertical layer of your model from the ground up, with your model facing right.</p>
+
+<h1 id="drawing-and-scaling-a-3d-model">Drawing and Scaling a 3D Model</h1>
+<ol>
+  <li>Assign your new sprite to an object.</li>
+  <li>Add the following lines to the object’s <code class="language-plaintext highlighter-rouge">Create</code> event:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image_speed = 0;
+image_zscale = 1;
+</code></pre></div></div>
+
+<p>The first line disables GameMaker’s built-in animation functionality by preventing it from iterating through the sprite’s frames automatically.  Later we’ll create a separate sprite for each frame of an animation and add some code to cycle through them manually.</p>
+
+<p>The variable created in the second line can be used to scale your model vertically in much the same way the built-in variables <code class="language-plaintext highlighter-rouge">image_xscale</code> and <code class="language-plaintext highlighter-rouge">image_yscale</code> work.  The only restriction is that it must be a positive integer.</p>
+
+<ol>
+  <li>Add the following lines to the object’s <code class="language-plaintext highlighter-rouge">Draw</code> event:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var i = 0;
+repeat(image_number*image_zscale) {
+  var xx = x + lengthdir_x(i,-view_angle[0]+90);
+  var yy = y + lengthdir_y(i,-view_angle[0]+90);
+  draw_sprite_ext(sprite_index, i/image_zscale, xx, yy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
+  i++;
+}
+</code></pre></div>    </div>
+    <p>This will iterate through the frames of your sprite and draw them at a position relative to both their height in your model and the current camera angle.  Each layer will be drawn <code class="language-plaintext highlighter-rouge">image_zscale</code> times before switching to the next one.</p>
+  </li>
+</ol>
+
+<h1 id="moving-the-camera">Moving the Camera</h1>
+<p>First we’ll set the camera to follow our player:</p>
+
+<ol>
+  <li>In the <code class="language-plaintext highlighter-rouge">Properties</code> panel of the <code class="language-plaintext highlighter-rouge">Room Editor</code>, open the <code class="language-plaintext highlighter-rouge">Viewports and Cameras</code> dropdown and check the boxes for <code class="language-plaintext highlighter-rouge">Enable Viewports</code> and <code class="language-plaintext highlighter-rouge">Clear Viewport Background</code>.</li>
+  <li>Open the dropdown for <code class="language-plaintext highlighter-rouge">Viewport 0</code>.</li>
+  <li>Set the <code class="language-plaintext highlighter-rouge">Width</code> and <code class="language-plaintext highlighter-rouge">Height</code> for both <code class="language-plaintext highlighter-rouge">Camera Properties</code> and <code class="language-plaintext highlighter-rouge">Viewport Properties</code>.  The camera dimensions dictate the size of the portion of your room that will be shown at any one time, and the viewport dimensions dictate the size of the window your game will play in.  Leave <code class="language-plaintext highlighter-rouge">X Pos</code> and <code class="language-plaintext highlighter-rouge">Y Pos</code> at <code class="language-plaintext highlighter-rouge">0</code> for both.</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">Object Following</code> to your player’s object.</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">Horizontal Border = Camera Width / 2</code></li>
+  <li>Set <code class="language-plaintext highlighter-rouge">Vertical Border = Camera Height / 2</code></li>
+</ol>
+
+<p>The last two steps will keep your player in the exact center of the screen.  Reducing these border values will keep the camera from moving until your player gets closer to the edge of the screen.</p>
+
+<p>Next we’ll add controls to rotate the camera.  I’m using a gamepad for input (left joystick to move, ), but you should be able to adapt this code for keyboard and mouse input fairly easily.</p>
+
+<p>Add the following code to the step function of some object.  You can use a dedicated input object, or just add it to your player object.  As long your game only ever has one instance of the object containing this code, it should work just fine.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>axisrh = gamepad_axis_value(0, gp_axisrh);
+if abs(axisrh) &gt; 0 {
+	view_angle[0] += axisrh;
+	camera_set_view_angle(view_camera[0], camera_get_view_angle(view_camera[0])+axisrh);
+}
+</code></pre></div></div>
+
+<p>This will check whether the right joystick of the gamepad in input slot <code class="language-plaintext highlighter-rouge">0</code> is moved to the left or right, and updates the primary camera’s <code class="language-plaintext highlighter-rouge">view_angle</code> accordingly.  The input value ranges from <code class="language-plaintext highlighter-rouge">-1</code> when the joystick is moved all the way to the left, to <code class="language-plaintext highlighter-rouge">+1</code> when it’s moved all the way right.</p>
+
+<h1 id="moving-your-player">Moving Your Player</h1>
+<p>You’ll also want to change your player’s movement controls to be relative to the current camera angle.  That way, moving the left joystick up will always move your player towards the top of the screen rather than the top of the room.  The following code will also go in your player’s <code class="language-plaintext highlighter-rouge">Step</code> event, or you can split it into scripts for handling input and movement separately:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>axislh = gamepad_axis_value(0, gp_axislh);
+axislv = gamepad_axis_value(0, gp_axislv);
+
+speed = point_distance(0 ,0, axislh, axislv) * walkSpeed;
+
+if abs(axislh) &gt; 0 or abs(axislv) &gt; 0 {
+  aimDestination = point_direction(0, 0, axislh, axislv) - view_angle[0];
+	direction = aimDestination
+	image_angle = aimDestination;
+}
+</code></pre></div></div>
+
+<p>First, get input from the gamepad.  Then set the speed equal to how far off center the left joystick is, multiplied by some constant <code class="language-plaintext highlighter-rouge">walkSpeed</code> which you can define in the <code class="language-plaintext highlighter-rouge">Create</code> event.</p>
+
+<p>Then set the player’s direction and the rotation of its sprite relative to both the left joystick’s direction and the camera angle.  The <code class="language-plaintext highlighter-rouge">if</code> statement here ensures that these updates will only be made if the joystick is off-center.  Without that check your player will snap to its default direction when you let go of the joystick, rather than continuing to face in the direction you were aiming.  If you find that this is happening regardless, or your player is twitchy, this means your joystick’s neutral position is slightly off-center.  You can correct for this manually by changing the conditional to something like <code class="language-plaintext highlighter-rouge">if abs(axislh) &gt; 0.1 or abs(axislv) &gt; 0.1</code>, or just use the built-in function <code class="language-plaintext highlighter-rouge">gamepad_set_axis_deadzone(0, 0.1)</code>.</p>
+
+<h1 id="setting-the-draw-depth-for-multiple-3d-objects">Setting the Draw Depth for Multiple 3D Objects</h1>
+<p>Next we want to ensure that objects which are closer to the camera are drawn over objects which are farther away.  Skipping this step will completely ruin the 3D effect.  The following code must be added to the <code class="language-plaintext highlighter-rouge">Step</code> event of <em>every</em> visible object in your game:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var CamForward = -view_angle[0] + 90;
+depth = dot_product(x,y, lengthdir_x(1,CamForward ), lengthdir_y(1,CamForward )) - 1000;
+</code></pre></div></div>
+
+<p>This just updates the object’s draw depth relative to both its x/y coordinates in the room and the camera angle.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">- 1000</code> at the end of the second line is very important.  The amount you need to subtract will vary depending on the size of your room but it doesn’t have to be precise, just sufficiently large.  Objects with higher depth values are drawn farther away from the camera, with the background layer at <code class="language-plaintext highlighter-rouge">depth = 100</code>.  This means anything with <code class="language-plaintext highlighter-rouge">depth &gt; 100</code> gets drawn behind the background, making it invisible.  If you don’t subtract some large number from everything’s depth, things will start to disappear at certain camera angles, like so:</p>
+
+<p><img src="/devlogs/sprite_stacking/rotation_problem.gif" alt=""></p>
+
+<h1 id="adding-animations">Adding Animations</h1>
+<p>Now we’re ready to animate our player.  Since we’re already using sprite frames to give our objects height, we can’t use them for animation as intended.  Instead, you’ll need to make a new voxel model for every frame of animation and make your object cycle through them manually.  Creating these models will almost certainly be the most time consuming part of making a sprite-stacked game.  You’re on your own for that part, but I’ll walk you through the full process of coding a simple three-frame animation.</p>
+
+<p>First you’ll need to initialize four new variables in your player’s Create event:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>animationCounter = -1;
+frameCounter = -1;
+state = PLAYERSTATE.FREE;
+defaultState = PLAYERSTATE.FREE;
+</code></pre></div></div>
+
+<p>Then create a Script named <code class="language-plaintext highlighter-rouge">Animate</code> with the following contents:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if argument0.frameCounter &lt;= 0 {
+	if argument0.animationCounter &gt;= array_height_2d(argument1) {
+		argument0.state = argument0.defaultState;
+		argument0.frameCounter = -1;
+		argument0.animationCounter = -1;
+		argument0.sprite_index = sPlayerFree;
+	} else {
+		animationCounter += 1;
+		argument0.sprite_index = argument1[animationCounter, 0];
+		argument0.frameCounter = round(argument1[animationCounter, 1] * fps)
+	}
+}
+
+argument0.frameCounter -= 1;
+</code></pre></div></div>
+
+<p>This script will help simplify the process of cycling through sprites.  It takes two arguments as input: an object to be animated, and an “animation” to be rendered on that object.  Each animation is structured as a 2D array with two columns and arbitrarily many rows.  The first column contains the sprite to be displayed, and the second column contains a number indicating the duration for which that sprite should be displayed.  We’ll define one of these animations in a moment.</p>
+
+<p>First you’ll need to set up a state machine for your player, the same way you probably would for a regular 2D game.  This defines the core logic of what actions your player is able to take and when.  They’ll begin in the <code class="language-plaintext highlighter-rouge">PLAYERSTATE.FREE</code> state, in which they can walk around the map.  When a certain button is pressed they’ll enter the <code class="language-plaintext highlighter-rouge">PLAYERSTATE.ATTACK</code> state, which forces them to stop moving, plays an attack animation, and then returns them to the <code class="language-plaintext highlighter-rouge">PLAYERSTATE.FREE</code> state.</p>
+
+<p>Listen for input from the attack button in the player’s Step event:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyAttack = gamepad_button_check_pressed(0, gp_shoulderr);
+</code></pre></div></div>
+
+<p>Then add a switch statement to the Step event that checks for the player’s current state and runs the appropriate function:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>switch(state) {
+	case PLAYERSTATE.FREE: PlayerState_Free(); break;
+	case PLAYERSTATE.ATTACK: PlayerState_Attack(); break;
+}
+</code></pre></div></div>
+
+<p>Now we can define these two state functions with two new Scripts.  Since we want the player to be able to move around while in the free state, let’s relocate our earlier movement code from the main Step function to a script named <code class="language-plaintext highlighter-rouge">PlayerState_Free</code>, and add to it an if statement to check for attack input and change the player’s state accordingly.  Combined, this script should look something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var aimDestination = point_direction(0, 0, axislh, axislv);
+if abs(axislh) &gt; axislDeadzone or abs(axislv) &gt; axislDeadzone {
+	direction = aimDestination;
+	image_angle = aimDestination;
+}
+
+speed = point_distance(0 ,0, axislh, axislv) * speedMultiplier;
+
+if keyAttack {
+	state = PLAYERSTATE.ATTACK
+}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">PlayerState_Attack</code> script will stop the player’s movement, define the attack animation array, and pass that array to the <code class="language-plaintext highlighter-rouge">Animate</code> script:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>speed = 0;
+
+animation[0, 0] = sPlayerAttack0;
+animation[0, 1] = 0.1;
+animation[1, 0] = sPlayerAttack1;
+animation[1, 1] = 0.1;
+animation[2, 0] = sPlayerAttack0;
+animation[2, 1] = 0.1;
+
+Animate(oPlayer, animation);
+</code></pre></div></div>
+
+<p>This assumes you have created two new sprites named <code class="language-plaintext highlighter-rouge">sPlayerAttack0</code> and <code class="language-plaintext highlighter-rouge">sPlayerAttack1</code>.  When the <code class="language-plaintext highlighter-rouge">Animate</code> script is called, it will change the sprite of the player object to <code class="language-plaintext highlighter-rouge">sPlayerAttack0</code> for 0.1 seconds, to <code class="language-plaintext highlighter-rouge">sPlayerAttack1</code> for 0.1 seconds, and back to <code class="language-plaintext highlighter-rouge">sPlayerAttack0</code> for another 0.1 seconds.  Once that’s finished, <code class="language-plaintext highlighter-rouge">Animate</code> automatically resets the player to its default (free) state, and we’re done!</p>
+
+<p><img src="/devlogs/sprite_stacking/animation.gif" width="50%"></p>
+
+<h1 id="adding-shadows">Adding Shadows</h1>
+<p>As I mentioned in the introduction, there’s a simple way to add shadows to your sprite-stacked objects which will greatly enhance the 3D effect.  Just follow these steps:</p>
+
+<ol>
+  <li>Open <code class="language-plaintext highlighter-rouge">Game Options</code> by clicking the gear icon in the toolbar at the top of the GameMaker window.</li>
+  <li>Under <code class="language-plaintext highlighter-rouge">Platform Settings</code>, select the platform for which you want to enable shadows.</li>
+  <li>Select the <code class="language-plaintext highlighter-rouge">Graphics</code> tab.</li>
+  <li>Check the box for <code class="language-plaintext highlighter-rouge">Interpolate colours between pixels</code>.</li>
+</ol>
+
+<p>That’s it!  Honestly I’m not 100% sure why this works, I discovered it by accident while playing around with the various graphics settings.  My guess is that GameMaker treats transparent pixels as black for the purpose of interpolation, so that a pixel next to a transparent pixel gets darkened.  The gif in the introduction section above seems to confirm this – the red 2D image is the only one without an outer ring of transparent pixels, and the corresponding layer of the 3D pyramid is the only one that doesn’t have a shadow.</p>
+
+<p>So far I’ve only tested this feature on macOS, but the setting is available for Windows and Ubuntu so I expect it will work there as well.</p>
+
+  </div><a class="u-url" href="/2020/04/10/sprite-stacking.html" hidden=""></a>
+</article>
+      
+      <footer>
+        <br><hr>
+        samdelaughter [at] gmail [dot] com<br>
+        <a href="https://github.com/sdelaughter">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/sdelaughter">LinkedIn</a><br>
+      </footer>
+  </body>
+</html>

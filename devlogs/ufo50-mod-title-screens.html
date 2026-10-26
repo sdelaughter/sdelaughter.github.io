@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sam DeLaughter</title>
+      <link href="/main.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+      <header>
+        <h1>Sam DeLaughter</h1>
+        <hr>
+        <h3>
+          <div text-align:right>
+            <a href="/">about</a> | 
+            <a href="/devlog">devlog</a> | 
+            <a href="/research">research</a> | 
+            <a href="/pottery">pottery</a> | 
+            <a href="/music">music</a>
+          </div>
+        <hr>
+        </h3>
+      </header>
+      
+      <article class="post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">UFO 50 Modding Guide: Title Screens</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-10-25T00:00:00+00:00" itemprop="datePublished">Oct 25, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’ve recently started making mods for <a href="https://50games.fun">UFO 50</a>, a phenomenal game (really 50+ different games) that everyone should play.  There’s a great <a href="https://discord.com/channels/525973026429206530/1297055481746952294">guide</a> for getting started making UFO 50 mods on the game’s official Discord server, but I thought it might be helpful to document some tips and techniques for modding specific aspects of the game, starting with title screens.  As an example, I’ll walk through the process of adding an endless mode to the game Magic Garden.</p>
+
+<p>All 50 sub-games (they are <em>much</em> more than “mini-games”) use the same <code class="language-plaintext highlighter-rouge">oTitleScreens</code> object.  Each game is assigned one of 18 “menu styles” which define the basic layout of the title screen.  Magic Garden is assigned menu style 3 in line 10 of <code class="language-plaintext highlighter-rouge">gml_GlobalScript_scr27_Meta</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>global.mGameMenuStyle[argument0] = 3;
+</code></pre></div></div>
+
+<p>The main logic to build the title screen’s structure from this style is in <code class="language-plaintext highlighter-rouge">gml_Object_oTitleScreens_Other_12</code>.  The portion used for menuStyle 3 starts on line 53:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (menuStyle == 3)
+{
+    menuOption[0] = scrStringManual("title_game_start", 0);
+    menuOption[1] = scrStringManual("title_ghigh_scores", 0);
+}
+</code></pre></div></div>
+
+<p>It adds two options to the menu, one for “START GAME” and one for “HIGH SCORES”.  We can’t simply add an extra option here, because that will change the title screens of <em>all</em> games using menu style 3.  Instead, we can define behavior for a new menu style down below.  Numbers 0-17 are already in use but we can choose any other value.  Let’s go with 27 to match the game’s ID.  Before the <code class="language-plaintext highlighter-rouge">else</code> condition that sets “INVALID MENU STYLE”, add:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (menuStyle == 27)
+{
+    menuOption[0] = scrStringManual("title_game_start", 0);
+    menuOption[1] = "ENDLESS";
+    menuOption[2] = scrStringManual("title_ghigh_scores", 0);
+}
+</code></pre></div></div>
+
+<p>We’ve copied the <code class="language-plaintext highlighter-rouge">menuStyle == 3</code> code above, but shifted the high scores entry down one and added a new “ENDLESS” entry in between.  Ideally we should probably add a new translation string for this and retrieve it using <code class="language-plaintext highlighter-rouge">scrStringManual()</code> like the other options do, but that’s a topic for another post.  Hardcoding the string “ENDLESS” works fine for now.</p>
+
+<p>Next we need to modify the game’s metadata to use this new menu style, by simply changing line 10 in <code class="language-plaintext highlighter-rouge">gml_GlobalScript_scr27_Meta</code> to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>global.mGameMenuStyle[argument0] = 27;
+</code></pre></div></div>
+
+<p>Now we need to change what happens when selecting our new menu option.  This is handled farther down in <code class="language-plaintext highlighter-rouge">gml_Object_oTitleScreens_Other12</code>, where the <code class="language-plaintext highlighter-rouge">SUB_TITLE</code> substate is run.  When the confirm button is pressed, the default behavior for any menu style and selection is to start the game:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else
+    scrSwitchSub(SUB_SELECTED)
+</code></pre></div></div>
+
+<p>Before that, there’s a check to see if we’re using menuStyle 3 and have the second option selected, and if so we switch to the high scores screen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (menuStyle == 3 &amp;&amp; menuSel==1)
+    scrSwitchState(STATE_HIGHSCORE);
+</code></pre></div></div>
+
+<p>We need to add a similar check for our new menuStyle, but remember that High Scores are now the third option instead of the second:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (menuStyle == 27 &amp;&amp; menuSel==2)
+    scrSwitchState(STATE_HIGHSCORE);
+</code></pre></div></div>
+
+<p>Since we haven’t explicitly defined any behavior for the first two options (“START GAME” and “ENDLESS”), both of them will transition to the <code class="language-plaintext highlighter-rouge">SUB_SELECTED</code> substate.  This is handled even farther down in <code class="language-plaintext highlighter-rouge">gml_Object_oTitleScreens_Other12</code>.  Most of the code here is for setting the number of players, but it seems like a good place to set a flag for endless mode as well.  Just before <code class="language-plaintext highlighter-rouge">scrSwitchSub(SUB_BUFFER)</code>, we can add:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (menuStyle == 27)
+{
+    if (menuSel == 0)
+        global.endlessMode = false;
+    else if (menuSel == 1)
+        global.endlessMode = true;
+}
+</code></pre></div></div>
+
+<p>For good measure, we should also initialize this new global variable to false in <code class="language-plaintext highlighter-rouge">gml_GlobalScript_scrInit</code>.  It would probably make more sense to set it as a variable of o27__Game, but Im not sure if that object has actually been created yet at this point.</p>
+
+<p>Finally, we need to reference this global variable in the game to see if we should bypass the win condition.  This check happens in the <code class="language-plaintext highlighter-rouge">Other 10</code> event of o27_Player:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (o27__Game.rank == 3 &amp;&amp; o27__Game.savedTotal &gt;= o27__Game.GOLD_GOAL)
+</code></pre></div></div>
+
+<p>We just need to add another component to this conditional so that it only applies when <code class="language-plaintext highlighter-rouge">global.endlessMode</code> is false:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>else if (o27__Game.rank == 3 &amp;&amp; o27__Game.savedTotal &gt;= o27__Game.GOLD_GOAL &amp;&amp; global.endlessMode == false)
+</code></pre></div></div>
+
+<p>That’s all there is to it, happy modding!</p>
+
+  </div><a class="u-url" href="/2024/10/25/ufo50-mod-title-screens.html" hidden=""></a>
+</article>
+      
+      <footer>
+        <br><hr>
+        samdelaughter [at] gmail [dot] com<br>
+        <a href="https://github.com/sdelaughter">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/sdelaughter">LinkedIn</a><br>
+      </footer>
+  </body>
+</html>
